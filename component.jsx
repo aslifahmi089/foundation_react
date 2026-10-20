@@ -1,16 +1,7 @@
-import { Component } from 'react';
-
-class Greeting extends Component {
-  render() {
-    return <h1>Hello, {this.props.name}!</h1>;
-  }
+function Welcome(props) {
+  return <h1>Halo, {props.name}</h1>;
 }
 
-export default function App() {
-  return (
-    <div>
-      <Greeting name="Fahmi" />
-      <Greeting name="React Learner" />
-    </div>
-  );
-}
+const root = ReactDOM.createRoot(document.getElementById('root'));
+const element = <Welcome name="Fahmi" />;
+root.render(element);
